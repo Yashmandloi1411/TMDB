@@ -20,7 +20,7 @@ function Moviedetails() {
 
   const { info } = useSelector((state) => state.movie);
 
-  console.log("Moviedetails component rendered with id:", id);
+  //console.log("Moviedetails component rendered with id:", id);
 
   const dispatch = useDispatch();
 

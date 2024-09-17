@@ -20,17 +20,17 @@ function PersonDetails() {
 
   const { info } = useSelector((state) => state.person);
 
-  console.log("persondetails component rendered with id:", id);
+  //console.log("persondetails component rendered with id:", id);
 
   const dispatch = useDispatch();
 
   const [category, setCategory] = useState("movie");
 
-  console.log("printing perosn details");
-  console.log(info);
+  //console.log("printing perosn details");
+  //console.log(info);
 
   useEffect(() => {
-    console.log("useEffect called");
+    //console.log("useEffect called");
     dispatch(asyncloadperson(id));
 
     return () => {

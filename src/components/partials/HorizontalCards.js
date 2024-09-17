@@ -30,7 +30,7 @@ function HorizontalCards({ data, cardStyle }) {
                 {d.name || d.title || d.original_name || d.original_title}
               </h1>
               <p className="w-[92%] mt-2 text-white pl-1">
-                {d.overview?.slice(0, 63)}...
+                {d.overview?.slice(0, 50)}...
                 <span className="text-zinc-500">More</span>
               </p>
             </div>
