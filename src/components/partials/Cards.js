@@ -5,15 +5,15 @@ function Cards({ data, title }) {
   //console.log(data);
   //console.log(title);
   return (
-    <div className="flex flex-wrap w-full bg-[#1F1E24] overflow-x-hidden overflow-y-auto">
+    <div className="flex flex-wrap w-full h-full bg-[#1F1E24] p-[5%] mt-1">
       {data.map((c, i) => (
         <Link
           to={`/${c.media_type || title}/details/${c.id}`}
-          className=" relative w-[25vh] mr-[5%]"
+          className=" relative w-[17%] mr-[3%]"
           key={i}
         >
           <img
-            className="mx-10 shadow-[8px_17px_38px_2px_rgba(0,0,0,.5)] h-[40vh] object-cover"
+            className="w-[35vh] shadow-[8px_17px_38px_2px_rgba(0,0,0,.5)]  object-cover"
             src={
               c.poster_path || c.backdrop_path || c.profile_path
                 ? `https://image.tmdb.org/t/p/original/${
@@ -24,13 +24,13 @@ function Cards({ data, title }) {
             alt=""
           />
 
-          <h1 className="mx-10  text-2xl text-zinc-300 mt-3 font-semibold">
+          <h1 className="mt-1 mb-3 text-lg text-zinc-300  font-semibold">
             {" "}
             {c.name || c.title || c.original_name || c.original_title}
           </h1>
 
           {c.vote_average && (
-            <div className="absolute right-[-35%] bottom-[55%] rounded-full text-xl font-semibold bg-yellow-600 text-white w-[7vh] h-[7vh] flex justify-center items-center">
+            <div className="absolute right-[0] bottom-[30%] rounded-full  bg-yellow-600 text-white w-[7vh] h-[7vh] flex justify-center items-center">
               {(c.vote_average * 10).toFixed()}
               <sup>%</sup>
             </div>

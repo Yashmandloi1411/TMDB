@@ -58,8 +58,8 @@ function Movie() {
 
   return movie.length > 0 ? (
     <div className="w-screen h-screen ">
-      <div className="px-5 w-full flex items-center ">
-        <h1 className="text-2xl text-zinc-400 font-semibold">
+      <div className="px-[4%] w-full flex items-center ">
+        <h1 className="w-[20%] text-2xl text-zinc-400 font-semibold">
           <i
             onClick={() => navigate(-1)}
             className="hover:text-[#6556CD] ri-arrow-left-line"
